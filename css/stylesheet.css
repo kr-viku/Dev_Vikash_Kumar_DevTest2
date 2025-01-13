@@ -904,3 +904,14 @@ a {
   text-align: center;
   height: 47px;
 }
+
+.thanks-menu {
+  font-weight: 600;
+  color: white;
+  width: auto;
+  font-size: 14px;
+}
+
+.thanks-menu span {
+  color: var(--lightblue);
+}

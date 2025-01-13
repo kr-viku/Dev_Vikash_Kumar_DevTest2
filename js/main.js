@@ -55,8 +55,11 @@ $(".nav-opener").click(function () {
     height: "toggle",
   });
 });
+
 function validate() {
   let num = 0;
+  let isEmailValid = false;
+
   $(".inp-box .inp").each(function () {
     if (!$(this).val()) {
       $(this).parent().addClass("empty");
@@ -66,16 +69,37 @@ function validate() {
     }
   });
 
+  // Email validation
+  const emailInput = $("#b-name");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+
+  if (emailInput.val() !== "") {
+    if (!emailPattern.test(emailInput.val())) {
+      emailInput.parent().addClass("empty");
+      emailInput
+        .siblings(".empty-tooltip")
+        .find("p")
+        .text("Please enter a valid email address.");
+      emailInput.siblings(".empty-tooltip").show(); // Show the error message
+    } else {
+      emailInput.parent().removeClass("empty");
+      emailInput.siblings(".empty-tooltip").hide(); // Hide the error message
+      isEmailValid = true;
+    }
+  }
+
   if ($(".drop-row select").val() == "") {
     $(".drop-row").addClass("empty");
   } else {
     $(".drop-row").removeClass("empty");
     num = num + 1;
   }
-  if (num === 5) {
+
+  if (num === 5 && isEmailValid) {
     document.location = "thanks.html";
   }
 }
+
 $(document).click(function () {
   $(".inp-box .inp").each(function () {
     $(this).parent().removeClass("empty");
