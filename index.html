@@ -360,18 +360,9 @@
           alt="video-bac-2"
         />
       </div>
-      <div class="video-img" onclick="playPause()">
-        <video id="myVideo" class="bac" width="320" height="240">
-          <source src="video/video.mp4" type="video/mp4" />
-          <track
-            src="video/subtitles_en.vtt"
-            kind="subtitles"
-            srclang="en"
-            label="English"
-            default
-          />
-        </video>
-        <span class="play" href="#">
+      <div class="video-img">
+        <img src="img/video-img.jpg" alt="" class="bac" />
+        <span id="openModalBtn" class="play" href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -388,6 +379,7 @@
         <img class="sm-logo" src="img/logo.svg" alt="logo" />
       </div>
     </section>
+
     <section class="footer">
       <div class="container-cus">
         <p class="copy">@2021 Get an Intervention Inc. All rights reserved.</p>
@@ -398,6 +390,24 @@
         </ul>
       </div>
     </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="video-my-modal modal">
+      <!-- Modal content -->
+      <div class="video-modal-content">
+        <span class="close">&times;</span>
+        <video id="myVideo" controls autoplay class="bac">
+          <source src="video/video.mp4" type="video/mp4" />
+          <track
+            src="video/subtitles_en.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+            default
+          />
+        </video>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

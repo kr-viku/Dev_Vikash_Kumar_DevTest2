@@ -712,7 +712,7 @@ a {
   transform: translateY(-50%);
 }
 .video-sec .txt {
-  padding: 95px 0px;
+  padding: 54px 0px;
   padding-left: 10%;
   padding-right: 13%;
   position: relative;
@@ -844,6 +844,48 @@ a {
   position: absolute;
   bottom: 33px;
   right: 72px;
+}
+
+/* The Modal (background) */
+.video-my-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.video-my-modal .video-modal-content {
+  margin: auto;
+  padding: 40px;
+  width: 80%;
+}
+
+.video-my-modal .video-modal-content video {
+  width: 100%;
+  height: 100%;
+}
+
+/* The Close Button */
+.video-my-modal .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.video-my-modal .close:hover,
+.video-my-modal .close:focus {
+  color: #d9cccc;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*footer*/

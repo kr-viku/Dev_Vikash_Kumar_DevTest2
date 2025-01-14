@@ -493,20 +493,17 @@
     margin-bottom: 16px;
   }
   .video-sec .txt .check-box p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 24px;
   }
   .video-sec .txt .check-box p span {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 600;
   }
   .video-sec .video-img .play {
     transform: scale(0.7);
     top: -34px;
-  }
-  .video-sec .video-img .bac {
-    width: 150%;
   }
   .video-sec .video-img::after {
     background: rgb(25 77 68 / 0%);
