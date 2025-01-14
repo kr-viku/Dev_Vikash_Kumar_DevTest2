@@ -312,6 +312,64 @@ a {
 .jumbo-box .form-box .form .inp.focus + label::after {
   opacity: 1;
 }
+
+.jumbo-box .form-box .form .country-label {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  cursor: text;
+}
+
+.jumbo-box .form-box .form .country-label .active {
+  font-size: 13px;
+  z-index: 7;
+  padding: 0px 5px;
+  position: relative;
+  border: 0px;
+  margin-top: -9px;
+}
+
+.jumbo-box .form-box .form .country-label span {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0px 5px;
+  padding-top: 13px;
+  transition: all 0.3s ease-in-out;
+}
+
+.jumbo-box .form-box .form .sel:focus + .country-label span,
+.jumbo-box .form-box .form .sel.focus + .country-label span {
+  font-size: 13px;
+  z-index: 7;
+  padding: 0px 5px;
+  position: relative;
+  border: 0px;
+  margin-top: -9px;
+}
+
+.jumbo-box .form-box .form .sel:focus + .country-label::before,
+.jumbo-box .form-box .form .sel.focus + .country-label::before {
+  opacity: 1;
+}
+.jumbo-box .form-box .form .sel:focus + .country-label::after,
+.jumbo-box .form-box .form .sel.focus + .country-label::after {
+  opacity: 1;
+}
+
+.jumbo-box .form-box .form .sel:focus + .country-label span::after,
+.jumbo-box .form-box .form .sel.focus + .country-label span::after {
+  width: 0px;
+  top: 5px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.jumbo-box .form-box .form .country-label .active::after,
+.jumbo-box .form-box .form .country-label .active:after {
+  width: 0px;
+  top: 5px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .jumbo-box .form-box .form .empty-tooltip {
   background: #ff7777;
   border-radius: 6px;
